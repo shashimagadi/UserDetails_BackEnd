@@ -17,5 +17,12 @@ app.listen(PORT, () => {
   console.log(`server running ${PORT}`);
 });
 
+
+app.get("/backend", (req,res)=>{
+  console.log("backend working");
+  
+  res.send("backedn working file");
+})
+
 const userRoutes = require("./routes/userRoutes");
 app.use("/api/users", userRoutes);
